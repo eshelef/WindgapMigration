@@ -34,7 +34,7 @@ dtD= dx^2/D;
 av=cumsum(lav(2:end));
 dtF= dx/(K*max(av).^m);%this is for n=1
 dt=100;
-if dt>dtF/2 | dt>dtD/2
+if dt>dtF/2 | dt>dtD/2;%with safety margins
     error('dt too large')
 end
 
